@@ -5,28 +5,29 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <div class="wrapper">
+    <div class="container-fluid" style="align: center; text-align: center;">
 
-      <h1 id="demo" style="align: center;"></h1>
-
+      <h1 id="demo"></h1>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
-  <!-- <RouterView /> -->
+  <RouterView />
 </template>
 
 <script>
 export default {
   data() {
-    this.i = 0;
-    this.txt = '{ethan o\'mahony}';
-    this.speed = 50;
+    return {
+      i: 0,
+      txt : '{ethan o\'mahony}',
+      speed : 100
+    }
   },
   mounted() {
-    this.typeWriter()
+    this.typeWriter();
   },
   methods: {
     async typeWriter() {
@@ -34,9 +35,9 @@ export default {
         document.getElementById("demo").innerHTML += this.txt.charAt(this.i);
         this.i++;
         setTimeout(this.typeWriter, this.speed);
+        }
       }
-      }
-      }
+  }
         }
 </script>
 
@@ -53,8 +54,7 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
+  font-size: 18px;
   margin-top: 2rem;
 }
 
@@ -80,7 +80,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    /* padding-right: calc(var(--section-gap) / 2); */
   }
 
   .logo {
@@ -94,7 +94,7 @@ nav a:first-of-type {
   }
 
   nav {
-    text-align: left;
+    text-align: center;
     margin-left: -1rem;
     font-size: 1rem;
 
