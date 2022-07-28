@@ -10,11 +10,18 @@ import HelloWorld from './components/HelloWorld.vue'
       <h1 id="demo"></h1>
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/portfolio">Portfolio</RouterLink>
+        <!-- <RouterLink to="/contact">Contact</RouterLink> -->
       </nav>
     </div>
   </header>
-  <RouterView />
+  <body>
+    <RouterView />
+  </body>
+  <footer>
+    test
+  </footer>
+  
 </template>
 
 <script>

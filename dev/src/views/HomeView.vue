@@ -3,13 +3,14 @@
 
 <template>
 <main>
-  <div class="container-fluid" style="align: center; text-align: center;">
-    <div class="info">
+  <div class="container-fluid info">
       <h2>I'm a 20 year old Mathematics student at <span @click="tcdLink" class="link">TCD</span>.</h2>
-    </div>
-    <div class="info">
+      <br/>
       <h2>I am currently a Data Science Intern at <span @click="tenableLink" class="link">Tenable</span>.</h2>
-    </div>
+      <br/>
+      <h2>I use <span @click="pythonLink" class="link">Python</span> and <span @click="rLink" class="link">R</span> for all things Data Science.</h2>
+      <br/>
+      <h2>You can find my portfolio <RouterLink to="/portfolio">here</RouterLink>.</h2>
   </div>
 </main>
 </template>
@@ -22,6 +23,12 @@
       },
       tenableLink() {
         window.open('https://www.tenable.com/')
+      },
+      pythonLink() {
+        window.open('https://www.python.org/')
+      },
+      rLink() {
+        window.open('https://www.r-project.org/')
       }
     }
   }
@@ -34,6 +41,12 @@
   }
 
   .info{
-    padding: 20px;
+    text-align: center;
+    max-height: 80vh;
+    padding-top: 20px;
+  }
+
+  main {
+    min-height: 100%;
   }
 </style>
