@@ -10,7 +10,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <h1 id="demo"></h1>
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/portfolio">Portfolio</RouterLink>
+        <!-- <RouterLink to="/portfolio">Portfolio</RouterLink> -->
         <!-- <RouterLink to="/contact">Contact</RouterLink> -->
       </nav>
     </div>
@@ -19,7 +19,6 @@ import HelloWorld from './components/HelloWorld.vue'
     <RouterView />
   </body>
   <footer>
-    test
   </footer>
   
 </template>
@@ -30,7 +29,7 @@ export default {
     return {
       i: 0,
       txt : '{ethan o\'mahony}',
-      speed : 100
+      speed : 125
     }
   },
   mounted() {
@@ -42,10 +41,10 @@ export default {
         document.getElementById("demo").innerHTML += this.txt.charAt(this.i);
         this.i++;
         setTimeout(this.typeWriter, this.speed);
-        }
       }
+    }
   }
-        }
+}
 </script>
 
 <style scoped>
