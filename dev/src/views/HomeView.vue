@@ -49,14 +49,12 @@
       onEnter(el, done) {
         gsap.to(el, {
           opacity: 1,
-          height: '2.5em',
           delay: el.dataset.index * 0.15,
           onComplete: done
         })
       },
       onBeforeEnter(el) {
         el.style.opacity = 0
-        el.style.height = 0
       },
     },
     mounted() {
@@ -83,8 +81,9 @@
   }
 
   .sentence {
-    margin-top: 20px;
-    margin-bottom: 50px;
+    line-height: 50px;
+    padding-top:2vh;
+    padding-bottom:2vh;
   }
 
   main {
