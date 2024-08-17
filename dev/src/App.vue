@@ -4,6 +4,8 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
+  <canvas style="position: absolute; left:0; top:0; z-index:-1; width: 100%; height: 100%; opacity: 0.4;">
+  </canvas>
   <header>
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
     <div class="container-fluid" style="align: center; text-align: center; align-items: center;">
@@ -16,8 +18,9 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </div>
   </header>
-  <body>
-    <RouterView />
+  <body class="test">
+    <!-- <div id="bgAnimation" style="position: fixed; z-index: -1;"></div> -->
+    <RouterView style="z-index:1"/>
   </body>
   <footer>
     <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ethan-o-mahony" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/ethan-o-mahony?trk=profile-badge"></a></div>
@@ -69,6 +72,12 @@ nav {
   text-align: center;
   margin-top: 2rem;
 }
+
+.test{
+    background: none;
+    background-color: transparent;
+    background-image: none;
+  }
 
 nav a.router-link-exact-active {
   color: var(--color-text);

@@ -1,4 +1,5 @@
 <script setup>
+import gsap from 'gsap';
 </script>
 
 <template>
@@ -16,6 +17,8 @@
         <h2 key="sentence3" data-index="3" class="sentence">I use <span @click="pythonLink" class="link">Python</span> and <span @click="rLink" class="link">R</span> for all things Data Science.</h2>
         <!-- <h2 key="sentence4" data-index="4" class="sentence">You can find my portfolio <RouterLink to="/portfolio">here</RouterLink>.</h2> -->
       </TransitionGroup>
+      <!-- <canvas style="position: fixed; z-index: -1;">
+      </canvas> -->
     </div>
   </main>
 </template>
@@ -49,7 +52,7 @@
       onEnter(el, done) {
         gsap.to(el, {
           opacity: 1,
-          delay: el.dataset.index * 0.15,
+          delay: el.dataset.index * 0.3,
           onComplete: done
         })
       },
@@ -60,6 +63,44 @@
     mounted() {
       this.currentAge();
       setInterval(this.currentAge, 50);
+      var canvas = document.querySelector('canvas'),
+      ctx = canvas.getContext('2d');
+
+      // Setting the width and height of the canvas
+      canvas.width = window.outerWidth;
+      canvas.height = window.outerHeight;
+
+      // Setting up the letters
+      var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
+      letters = letters.split('');
+
+      // Setting up the columns
+      var fontSize = 10,
+          columns = canvas.width / fontSize;
+
+      // Setting up the drops
+      var drops = [];
+      for (var i = 0; i < columns; i++) {
+        drops[i] = 1;
+      }
+
+      // Setting up the draw function
+      function draw() {
+        ctx.fillStyle = 'rgba(24, 24, 24, .1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        for (var i = 0; i < drops.length; i++) {
+          var text = letters[Math.floor(Math.random() * letters.length)];
+          ctx.fillStyle = '#0f0';
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+          drops[i]++;
+          if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
+            drops[i] = 0;
+          }
+        }
+    }
+
+    // Loop the animation
+    setInterval(draw, 33);
     }
   }
 </script>
@@ -87,6 +128,7 @@
   }
 
   main {
-    min-height: 100%;
+    padding-bottom:20vh;
+    /* min-height: 100%; */
   }
 </style>
