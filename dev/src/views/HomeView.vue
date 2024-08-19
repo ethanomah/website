@@ -7,7 +7,6 @@ import gsap from 'gsap';
     <div class="container-fluid info">
       <TransitionGroup 
         appear
-        css="false"
         name="slide-fade"
         @before-enter="onBeforeEnter"
         @enter="onEnter"
@@ -17,8 +16,6 @@ import gsap from 'gsap';
         <h2 key="sentence3" data-index="3" class="sentence">I use <span @click="pythonLink" class="link">Python</span> and <span @click="rLink" class="link">R</span> for all things Data Science.</h2>
         <!-- <h2 key="sentence4" data-index="4" class="sentence">You can find my portfolio <RouterLink to="/portfolio">here</RouterLink>.</h2> -->
       </TransitionGroup>
-      <!-- <canvas style="position: fixed; z-index: -1;">
-      </canvas> -->
     </div>
   </main>
 </template>
