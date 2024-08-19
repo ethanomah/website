@@ -1,11 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import SidebarComponent from './components/SidebarComponent.vue'
+import MatrixBackground from './components/MatrixBackground.vue'
 </script>
 
 <template>
-  <canvas style="position: absolute; left:0; top:0; z-index:-1; width: 100%; height: 100%; opacity: 0.4;">
-  </canvas>
+  <MatrixBackground />
   <SidebarComponent />
 
   <header>
