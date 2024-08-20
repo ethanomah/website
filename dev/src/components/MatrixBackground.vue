@@ -14,8 +14,8 @@
         ctx = canvas.getContext('2d');
 
         // Setting the width and height of the canvas
-        canvas.width = window.outerWidth;
-        canvas.height = window.outerHeight;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
         // Setting up the letters
         var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
@@ -47,7 +47,7 @@
         }
 
         // Loop the animation
-        setInterval(draw, 33);
+        setInterval(draw, 50);
     }
   }
 </script>

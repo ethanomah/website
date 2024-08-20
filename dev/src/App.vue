@@ -11,7 +11,7 @@ import MatrixBackground from './components/MatrixBackground.vue'
   <header>
     <div class="container-fluid" style="align: center; text-align: center; align-items: center;">
 
-      <h1 id="demo"></h1>
+      <h1 id="animated-name"></h1>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <!-- <RouterLink to="/portfolio">Portfolio</RouterLink> -->
@@ -47,7 +47,7 @@ export default {
     },
     async typeWriter() {
       if (this.i < this.txt.length) {
-        document.getElementById("demo").innerHTML += this.txt.charAt(this.i);
+        document.getElementById("animated-name").innerHTML += this.txt.charAt(this.i);
         this.i++;
         setTimeout(this.typeWriter, this.speed);
       }
