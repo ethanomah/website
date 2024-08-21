@@ -3,10 +3,14 @@
     <button @click="toggleSidebar" class="toggle-btn">☰</button>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
+      <!-- <li><a href="#">About</a></li>
       <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#">Contact</a></li> -->
     </ul>
+    <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ethan-o-mahony" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/ethan-o-mahony?trk=profile-badge"></a></div> -->
+    <div style="padding-left: 25px; padding-right: 25px; margin-top: 20px;">
+      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ethan-o-mahony" data-version="v1" style="max-width: 200px;"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/ethan-o-mahony?trk=profile-badge"></a></div>  
+    </div>
   </div>
 </template>
 
@@ -30,9 +34,9 @@ export default {
 <style scoped>
 .sidebar {
   position: fixed;
-  left: -250px;
+  left: -300px;
   top: 0;
-  width: 250px;
+  width: 300px;
   height: 100%;
   background-color: var(--color-background);
   color: white;

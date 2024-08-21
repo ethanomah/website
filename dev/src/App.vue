@@ -23,7 +23,6 @@ import MatrixBackground from './components/MatrixBackground.vue'
     <RouterView style="z-index:1"/>
   </body>
   <footer>
-    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ethan-o-mahony" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/ethan-o-mahony?trk=profile-badge"></a></div>
   </footer>
 
 </template>
@@ -61,8 +60,7 @@ header {
   line-height: 1.5;
   max-height: 100vh;
   text-align: start;
-  /* width: 100%;
-  margin: 0 auto; */
+  margin: 0 auto;
 }
 
 .logo {
