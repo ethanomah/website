@@ -11,12 +11,24 @@ import MatrixBackground from './components/MatrixBackground.vue'
   <header>
     <div class="container-fluid" style="align: center; text-align: center; align-items: center;">
 
-      <h1 id="animated-name"></h1>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
+      <h1 class="name" id="animated-name"></h1>
+      <div class="image-row" style="padding: 10px auto;">
+        <a href="https://www.linkedin.com/in/ethan-o-mahony/">
+          <img src="./assets/linkedin_logo.png" alt="Follow me on LinkedIn" style="height: 24px; width: 29px;"/>
+        </a>
+        <a href="https://x.com/less3than">
+          <img src="./assets/x_logo.png" alt="Follow me on X" style="height: 24px; width: 25px;"/>
+        </a>
+        <a href="https://github.com/ethanomah">
+          <img src="./assets/github_logo.png" alt="Check out my GitHub page" style="height: 24px; width: 24px;"/>
+        </a>
+      </div>
+      <!-- <nav> -->
+
+        <!-- <RouterLink to="/">Home</RouterLink> -->
         <!-- <RouterLink to="/portfolio">Portfolio</RouterLink> -->
         <!-- <RouterLink to="/contact">Contact</RouterLink> -->
-      </nav>
+      <!-- </nav> -->
     </div>
   </header>
   <body class="test">
@@ -93,6 +105,19 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+}
+
+.image-row {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.name {
+  padding-top: 2vh;
+  padding-bottom: 3vh;
 }
 
 nav a:first-of-type {
